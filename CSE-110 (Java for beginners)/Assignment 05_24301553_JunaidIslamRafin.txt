@@ -1,0 +1,227 @@
+//Task 01
+import java.util.Scanner;
+public class task1 
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter positive integer N");
+        int N = sc.nextInt();
+        int count = 0;
+        for (int number = 2; count < N; number++) 
+        {
+            int divCount = 0;
+            for (int i = 1; i <= number; i++) 
+            {
+                if (number % i == 0) 
+                {
+                    divCount++;
+                }
+            }
+            if (divCount == 2)//jodi only duita divisor thake
+            {
+                System.out.println(number);
+                count++;
+            }
+        }
+    }
+}
+
+//Task 02
+import java.util.Scanner;
+public class t2
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the value of N");
+    int N=sc.nextInt();
+    int y=0;
+    if(N>0)
+    {
+      for(int i=1;i<=N;i++)
+      {
+        int sum=0;
+        for(int j=1;j<=i;j++)
+        { 
+          sum+=j;
+        }
+         y-=(sum);
+      }
+    }
+    System.out.println("The value of y is: "+y);
+  }
+}
+
+//Task 03
+import java.util.Scanner;
+public class t3
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    for(int i=1;;i++)
+    {
+      System.out.println("Enter number: ");
+      int n=sc.nextInt();
+      int divCount=0;
+      if(n%2==0)
+      {
+        for(int j=1;j<=n;j++)
+        {
+          if(n%j==0)
+          {
+            divCount++;
+          }
+        }
+        System.out.println(n+" has "+divCount+" divisors");
+      }
+      else
+      {
+        break;
+      }
+    }
+  }
+}
+
+//Task 04
+import java.util.Scanner;
+public class t4
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the number of test cases:");
+    int n=sc.nextInt();
+    for(int i=1;i<=n;i++)
+    {
+      System.out.println(i+". Enter the value of X:");
+      int x=sc.nextInt();
+      System.out.println(i+". Enter the value of Y:");
+      int y=sc.nextInt();
+      int sum=0;
+      if(x%2==0){
+        x+=1;
+      }
+      for(int j=1;j<=y;j++)
+      {
+        sum+=x;
+        x+=2;
+      }
+      System.out.println(sum);
+    }
+  }
+}
+
+//Task 05
+import java.util.Scanner;
+public class t5
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the length");
+    int length=sc.nextInt();
+    System.out.println("Enter the width");
+    int width=sc.nextInt();
+    for(int i=1;i<=width;i++)
+    {
+      for(int j=1;j<=length;j++)
+      {
+        System.out.print(j+" ");
+      }
+      System.out.println();
+    }
+  }
+}
+
+//Task 06
+import java.util.Scanner;
+public class t6
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the height");
+    int height=sc.nextInt();
+    int space=height-1;
+    for(int i=1;i<=height;i++)
+    {
+      for(int j=0;j<space;j++)
+      {
+        System.out.print("  ");
+      }
+      for(int z=1;z<=i;z++)
+      {
+        System.out.print(z+" ");
+      }
+      System.out.println();
+      space--;
+    }
+  }
+}
+
+//Task 07
+import java.util.Scanner;
+public class t7
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the height");
+    int height=sc.nextInt();
+    int space=height-1;
+    for(int i=1;i<=height;i++)
+    {
+      for(int j=0;j<space;j++)
+      {
+        System.out.print("  ");
+      }
+      for(int z=1;z<(i*2);z++)
+      {
+        System.out.print(z+" ");
+      }
+      System.out.println();
+      space--;
+    }
+  }
+}
+
+//Task 08
+import java.util.Scanner;
+public class t8
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Start");
+    int start=sc.nextInt();
+    System.out.println("End");
+    int end=sc.nextInt();
+    System.out.println("Armstrong numbers:");
+    for(int i=start;i<=end;i++)
+    {
+      int power=0;//power for digits
+      int id=0;//Individual digits
+      int sum=0;
+      int n=i;
+      int m=i;
+      for(;n>0;)
+      {
+        n=n/10;
+        power++;
+      }
+      for(;m>0;)
+      {
+        id=m%10;
+        m=m/10;
+        sum+=Math.pow(id,power);
+      }
+      if(sum==i)
+      {
+        System.out.println(sum);
+      }
+    }
+  }
+}
+

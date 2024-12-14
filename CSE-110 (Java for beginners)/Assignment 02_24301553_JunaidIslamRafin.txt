@@ -1,0 +1,324 @@
+//Task 1
+public class Task1
+{
+  public static void main(String[]args)
+  {
+    int hungry;//(a) is valid 
+    int 2AB;//(b) is invalid because it cannot begin with a number 
+    int 312.2;//(c) is invaild because it cannot have decimals
+    int MOBILE;//(d) is valid
+    int "Ans";//(e) is invalid because it cannot have any quotation marks
+    int $30;//(f) is valid
+    int Yes/No;//(g) is invalid because it brekaes the syntax rules for naming variable 
+    int student-id;//(h) is invalid because hyphens cannot be used in variable name 
+    int A+3;;//(i) is invalid because it cannot have any mathemetical operators
+    int 'X';//(j) is invalid because it cannot have any apostrophes
+    int return;//(k) is invalid because it cannot have any reserved keywords
+  }
+}
+ 
+//Task 2
+//Task2.1 
+public class task2_1
+{
+  public static void main(String[]args)
+  {
+    int num =12;
+    System.out.println("The integer is:"+num);
+}
+}
+
+//Task2.2
+public class task2_2
+{
+  public static void main(String[]args)
+  {
+   int num1=12;
+   int num2=6;
+   System.out.println("The first integer is:"+num1);
+   System.out.println("The second integer is:"+num2);
+   System.out.println("The sum of the integers is="+(num1+num2));
+}
+}
+
+//Task2.3
+public class task2_3
+{
+  public static void main(String[]args)
+  { 
+   int num1=12;
+   int num2=6;
+    System.out.println("The first integer is:"+num1);
+    System.out.println("The second integer is:"+num2);
+    System.out.println("The product of the integers is="+num1*num2);
+    System.out.println("The division of the integers is="+num1/num2);
+  }
+ }
+ 
+//Task2.4
+public class task2_4
+{
+  public static void main(String[]args)
+  {
+   double num1=12;
+   double num2=6;
+    System.out.println("Task 2.1: The first number is:"+num1);
+    System.out.println("The second number is:"+num2);
+    System.out.println("Task 2.2: sum="+(num1+num2));
+    System.out.println("Task 2.3: product="+num1*num2);
+    System.out.println("Task 2.3: division="+num1/num2);
+  }
+ }
+
+//Task2.5
+public class task2_5
+{
+  public static void main(String[]args)
+  {
+   int num1=12;
+   double num2=6;
+    System.out.println("Task 2.1: The first number is:"+num1);
+    System.out.println("The second number is:"+num2);
+    System.out.println("Task 2.2: sum="+(num1+num2));
+    System.out.println("Task 2.3: product="+num1*num2);
+    System.out.println("Task 2.3: division="+num1/num2);
+  }
+ }
+
+//Task2.6
+public class task2_6
+{
+    public static void main(String[]args)
+  {
+      String num1="12";
+      String num2="6";
+    System.out.println("Task 2.1: The first number is:"+num1);
+    System.out.println("The second number is:"+num2);
+    System.out.println("Task 2.2: Addition:"+(num1+num2));// The "+"operator joins the strings 12 and 6, resulting in 126.
+    
+    //If the first variable is an integer and the second variable is string then:
+    int num3=12;
+    String num4="6";
+    System.out.println("Addition of integer and string:"+(num3+num4));//It's the same as joining two string variables.
+    //Vice-versa
+    String num5="12";
+    int num6=6;  
+    System.out.println("Addition of string and integer:"+(num5+num6));//It's the same as joining two string variables.
+   }  
+}
+
+//Task3
+public class task3
+{
+    public static void main(String[]args)
+  {
+    double rad=4;
+    System.out.println("Circumference="+2*Math.PI*rad);
+    System.out.println("Area="+Math.PI*rad*rad);
+    }
+}
+
+//Task4
+public class task4
+{
+    public static void main(String[]args)
+  {
+    int num=8250;
+    System.out.println("The given number is:");
+    int mod=num%100;
+    System.out.println("The last two digits of the number is:"+mod);
+  }
+}
+
+//Task 5
+public class Task5
+{
+  public static void main(String[]args)
+  {
+    double x=7251;
+    System.out.println("Given value for inch:"+x);
+    double y=x*0.0254;
+    System.out.println("7251 inch is "+y+" meters");
+  }
+}
+ 
+//Task 6  
+
+//Task 6 a
+public class Task6_a
+{
+  public static void main(String[]args)
+  {
+    int n1=5;
+    int n2=7;
+    System.out.println("The 1st number is:"+n1);
+    System.out.println("The 2nd number is:"+n2);
+    int x=n1;
+    n1=n2;
+    n2=x;
+    System.out.println("After swapping: The 1st number is:"+n1);
+    System.out.println("After swapping: The 2nd number is:"+n2);
+  }
+}
+
+//Task 6 b
+public class Task6_b
+{
+  public static void main(String[]args)
+  {
+    int n1=5;
+    int n2=7;
+    System.out.println("The 1st number is:"+n1);
+    System.out.println("The 2nd number is:"+n2);
+    n1=n1+n2;
+    n2=n1-n2;
+    n1=n1-n2; 
+    System.out.println("After swapping: The 1st number is:"+n1);
+    System.out.println("After swapping: The 2nd number is:"+n2);
+  }
+}
+
+//Task 7
+public class Task7
+{
+  public static void main(String[]args)
+  {
+    int m=6816618;
+    System.out.println("Given number of minutes:"+m);
+    int tD;//Total Days
+    int y;//Years
+    int d;//Remaining days
+    tD=m/(60*24);
+    y=tD/365;
+    d=tD%365;
+    System.out.println("6816618 minutes is approximately "+y+" years and "+d+" days");      
+  }
+}
+
+//Task 8
+public class Task8
+{
+  public static void main(String[]args)
+  {
+    int a=2;
+    int b=5;
+    int c=8;
+    int d=(2*b*((c-a)/3)+7);
+    System.out.println("The value of d after calculation is:"+d);
+  }
+}
+
+//Task9
+import java.util.Scanner;
+public class Task9
+{public static void main(String[]args)
+  {Scanner gc=new Scanner(System.in);
+  System.out.println("Please enter a number");
+  int num=gc.nextInt();
+  int num1=num*1;
+  int num2=num*2;
+  int num3=num*3;
+  int num4=num*4;
+  int num5=num*5;
+  int num6=num*6;   
+  int num7=num*7;
+  int num8=num*8;
+  int num9=num*9;
+  int num10=num*10;
+ System.out.println(num+"x1="+num1); 
+ System.out.println(num+"x2="+num2);                   
+ System.out.println(num+"x3="+num3);        
+ System.out.println(num+"x4="+num4); 
+ System.out.println(num+"x5="+num5); 
+ System.out.println(num+"x6="+num6); 
+ System.out.println(num+"x7="+num7); 
+ System.out.println(num+"x8="+num8); 
+ System.out.println(num+"x9="+num9); 
+ System.out.println(num+"x10="+num10); 
+}
+}
+
+//Task 10
+public class Task10
+{
+  public static void main(String[]args)
+  {
+    int a=1;//first term
+    int L=100;//last term
+    int n=100;//number of terms
+    int S=n/2*(a+L);
+    System.out.println("The sum of the first 100 positive numbers is:"+S);
+  }
+}
+
+//Task 11
+public class Task11
+{
+  public static void main(String[]args)
+  {
+    double a=4.5;
+    double b=9.5;
+    double c=Math.sqrt(a*a+b*b);//finding the value of c
+    System.out.println("The value of c is: "+c);
+     double sinA=a/c;
+     double sinB=b/c;
+     double cosA=b/c;
+     double cosB=a/c;                    
+      System.out.println("The value of SinA="+sinA);
+      System.out.println("The value of CosA="+cosA);
+      System.out.println("The value of SinB="+sinB);
+      System.out.println("The value of CosB="+cosB);
+   }
+}
+
+//Task 12
+public class Task12
+{
+  public static void main(String[]args)
+  {
+    int id=24301553;
+    int x=id%100;
+    int q=x/10;//For printing the last digit 
+    int p=id%10;//For printing the 2nd last digit
+    System.out.println(p);
+    System.out.println(q);
+  }
+}
+  
+//Task 13
+public class Task13
+{
+  public static void main(String[]args)
+  {
+    //total time is 5 hours, 56 minutes, and 23 seconds
+    double h=5;
+    double m=56;
+    double s=23;
+    double t=h+(m/60)+(s/(60*60));//Calculating the total time in hours
+    double d=1553;//Distance in meters(last 4 digits of my id)
+    double kmh=d/(1000*t);
+    double milesh=d/(1609*t);
+    System.out.println("Your velocity in km/h is "+kmh);
+    System.out.println("Your velocity in miles/h is "+milesh);
+  }
+}
+
+//Task 14
+public class Task14
+{
+  public static void main(String[]args)
+  {
+    int a=8;
+    int b=3;
+    int r=a/2;//finding the base to calculate the hypotenus 
+    double s=Math.sqrt(r*r+b*b);//finding the side of the Hexagon
+    double A=((3*Math.sqrt(3))/2)*s*s;//Area of the Hexagon
+    double C=6*s;//Circumference of the Hexagon
+    System.out.println("The area of the Hexagone is "+A);
+    System.out.println("The circumference of the Hexagone is "+C);
+  }
+}
+      
+   
+    
+    

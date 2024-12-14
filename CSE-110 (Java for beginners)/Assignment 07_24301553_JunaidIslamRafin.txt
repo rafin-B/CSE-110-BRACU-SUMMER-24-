@@ -1,0 +1,310 @@
+//Task 01
+import java.util.Scanner;
+import java.util.Arrays;
+public class t1
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("N = ");
+    int n=sc.nextInt();
+    int[] ar1=new int[n+1];
+    for(int i=0;i<=n;i++)
+    {
+      if(i<n){
+      System.out.println("Enter a number: ");
+      ar1[i]=sc.nextInt();
+      }
+      else if(i==n){
+      System.out.println("Enter another number: ");
+      ar1[i]=sc.nextInt();
+      } 
+    }
+    System.out.println("The elements of the array are:");
+    for(int j=0;j<n;j++)
+    {
+      System.out.println(j+": "+ar1[j]);
+    }
+    System.out.println("After resizing the array:");
+    for(int k=0;k<=n;k++)
+    {
+      System.out.print(ar1[k]+" ");
+    }
+    System.out.println();
+  }
+}
+
+//Task 02
+public class t2
+{
+    public static void main(String[] args)
+    {
+        int[] arr={9, -5, 7, 9, -5, 5, 7};
+        System.out.println("Before removing duplicates:");
+        for(int k=0;k<arr.length;k++)
+        {
+          System.out.print(arr[k]+" ");
+        }
+        System.out.println();
+        System.out.println("After replacing duplicates with 0:");
+        for(int i=0;i<arr.length;i++)
+        {
+          for(int j=i+1;j<arr.length;j++)
+          {
+            if(arr[i]==arr[j])
+            {
+              arr[j]=0;
+            }
+          }
+          System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+    }
+}
+
+//Task 03
+import java.util.Scanner;
+import java.util.Arrays;
+public class t3
+{
+    public static void main(String[]args)
+    {
+      Scanner sc=new Scanner(System.in);
+      System.out.println("Enter the length of the array:");
+      int size=sc.nextInt();
+      int[] arr=new int[size];
+      for(int i=0;i<size;i++)
+      {
+        System.out.println("Enter a number:");
+        arr[i] =sc.nextInt();
+      }
+      
+      //(a)
+      
+      int[] new_arr=new int[size];
+      for(int i=size-1;i>=0;i--)
+      {
+        new_arr[i]=arr[size-i-1];
+      }
+      System.out.println("Reversed using a new array:");
+      for(int i=0;i<size;i++)
+      {
+        System.out.print(new_arr[i]+" ");
+      }
+      System.out.println();
+      
+      //(b)
+      
+      for(int i=0;i<size/2;i++)
+      {
+        int temp=arr[i];
+        arr[i]=arr[size-i-1];
+        arr[size-i-1]=temp;
+      }
+      System.out.println("Reversed using the original array:");
+      for(int i=0;i<size;i++)
+      {
+        System.out.print(arr[i]+" ");
+      }
+      System.out.println();
+    }
+}
+
+//Task 04
+import java.util.Scanner;
+import java.util.Arrays;
+public class t4
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter N:");
+    int N=sc.nextInt();
+    int[] ar1=new int[N]; 
+    for(int i=0;i<N;i++)
+    {
+      ar1[i]=sc.nextInt();
+    }
+    System.out.println("Original array:");
+    for(int i=0;i<N;i++)
+    {
+      System.out.print(ar1[i]+" ");
+    }
+    System.out.println();
+    System.out.println("After modifying:");
+    for(int i=0;i<N;i++)
+    {
+      if(ar1[i]<1)
+      {
+        ar1[i]=0;
+      }
+      else{
+        ar1[i]=1;
+      }
+      System.out.print(ar1[i]+" ");
+    }
+    System.out.println();
+  }
+}
+
+//Task 05
+import java.util.Scanner;
+import java.util.Arrays;
+
+public class t5 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter N:");
+        int N = sc.nextInt();
+        int[] ar1 = new int[N];
+        boolean flag=true;
+        for(int i=0;i<N;i++)
+        {
+          System.out.println("Enter a number:");
+          ar1[i]=sc.nextInt();
+        }
+        System.out.println("Enter a number to find the index: ");
+        int x=sc.nextInt();
+        for(int i=0;i<N;i++)
+        {
+          if(ar1[i]==x)
+          {
+            flag=true;
+            System.out.println(x+" is at index "+i);
+            break;
+          }
+          else
+          {
+            flag=false;
+          }
+        }
+        if(flag==false)
+        {
+          System.out.println("Element not found");
+        }
+    }
+}
+
+//Task 06
+import java.util.Scanner;
+import java.util.Arrays;
+public class t6
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter the length of the arrays:");
+    int n=sc.nextInt();
+    double[] arr=new double[n];
+    int maxi=0;
+    int mini=0;
+    System.out.println("Enter a number:");
+    arr[0]=sc.nextDouble();
+    double max=arr[0];
+    double min=arr[0];
+    double sum=arr[0];
+    for(int i=1;i<n;i++)
+    {
+      System.out.println("Enter a number:");
+      arr[i]=sc.nextDouble();
+      sum+=arr[i];
+      if(arr[i]>=max)
+      {
+        max=arr[i];
+        maxi=i;
+      }
+      if(arr[i]<=min)
+      {
+        min=arr[i];
+        mini=i;
+      }
+    }
+    double avg=sum/n;
+    System.out.println("Maximum element "+max+" found at index "+maxi);
+    System.out.println("Minimum element "+min+" found at index "+mini);
+    System.out.println("Summation: "+sum);
+    System.out.println("Average: "+avg);
+  }
+}
+
+public class t7 {
+  public static void main(String[] args) {
+     int arr [] = {-5, 10, -7, -5};
+     System.out.println("Input array:");
+     for (int i = 0; i < arr.length; i++) {
+        System.out.print(arr[i] + " ");
+      }
+      System.out.println();
+      int uniqueCount = arr.length;
+      for (int i = 0; i < arr.length; i++) {
+        for (int j = i + 1; j < arr.length; j++) {
+            if (arr[i] == arr[j] && arr[j] != Integer.MIN_VALUE) {
+               arr[j] = Integer.MIN_VALUE;  // Mark duplicate with a unique value
+                 uniqueCount--;
+           }
+         }
+       }
+      int[] output = new int[uniqueCount];
+      int index = 0;
+      for (int i = 0; i < arr.length; i++) {
+          if (arr[i] != Integer.MIN_VALUE) {
+              output[index] = arr[i];
+              index++;
+         }
+      }
+      System.out.println("New array:");
+      for (int i = 0; i < output.length; i++) {
+          System.out.print(output[i] + " ");
+      }
+      System.out.println();
+   }
+}
+
+//Task 08
+import java.util.Scanner;
+import java.util.Arrays;
+public class t8
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Please enter the length of the array 1:");
+    int n1=sc.nextInt();
+    int [] arr1=new int [n1];
+    System.out.println("Please enter the elements of the arr1");
+    for(int i=0;i<n1;i++)
+    {
+      arr1[i]=sc.nextInt();
+    }
+    System.out.println("Please enter the length of the array 2:");
+    int n2=sc.nextInt();
+    int [] arr2=new int [n2];
+    System.out.println("Please enter the elements of the arr2");
+    for(int i=0;i<n2;i++)
+    {
+      arr2[i]=sc.nextInt();
+    }
+    int count=0;
+    for(int i=0;i<n2;i++)
+    {
+      for(int j=0;j<n1;j++)
+      {
+        if(arr2[i]==arr1[j])
+        {
+          count++;
+        }   
+    }
+  }
+      if(count==n2)
+      {
+        System.out.println("Array 2 is a subset of Array 1.");
+      }
+      else{
+        System.out.println("Array 2 is not a subset of Array 1.");
+      }
+  }
+}
+    
+    
+    
+    

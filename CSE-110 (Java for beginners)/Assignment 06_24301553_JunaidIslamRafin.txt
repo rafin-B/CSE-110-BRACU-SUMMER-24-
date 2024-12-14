@@ -1,0 +1,252 @@
+//Task 01
+import java.util.Scanner;
+public class t1
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    System.out.println("Enter a sentence:");
+    String s1=sc.nextLine();
+    for(int i=0;i<s1.length();i++)
+    {
+      if(s1.codePointAt(i)>=97 && s1.codePointAt(i)<=122)
+     {
+        int upperCase=(int)s1.charAt(i)-32;
+        System.out.print((char)upperCase);
+     }
+     else
+      {
+        System.out.print(s1.charAt(i));
+      }
+    }
+    System.out.println();
+  }
+}
+
+//Task 02
+import java.util.Scanner;
+public class t2
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s1=sc.nextLine();
+    boolean x=true;
+    for(int i=0;i<s1.length();i++)
+    {
+      if(s1.charAt(i)!=s1.charAt(s1.length()-1-i))
+      {
+        x=false;
+      }
+    }
+    System.out.println(x);
+  }
+}
+
+//Task 03
+import java.util.Scanner;
+public class t3
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s1=sc.nextLine();
+    for(int i=0;i<s1.length();i++)
+    {
+      if(s1.charAt(i)=='-' ||s1.charAt(i)==',')
+      {
+        System.out.println();
+      }
+      else
+      {
+        System.out.print(s1.charAt(i));
+      }
+    }
+    System.out.println();
+  }
+}
+
+//Task 04
+import java.util.Scanner;
+public class t4
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s1=sc.nextLine();
+    for(int i=(s1.length()-1);i>=0;i--)
+    {
+      System.out.print(s1.charAt(i));
+    }
+    System.out.println();
+  }
+}
+
+//Task 05
+import java.util.Scanner;
+public class t5
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s1=sc.nextLine();
+    s1=s1.toLowerCase();
+    int vCount=0;
+    int cCount=0;
+    for(int i=0;i<s1.length();i++)
+    {
+      if(s1.charAt(i)=='a'||s1.charAt(i)=='e'||s1.charAt(i)=='i'||s1.charAt(i)=='o'||s1.charAt(i)=='u')
+      {
+        vCount++;
+      }
+      else if(s1.charAt(i)>='a' && s1.charAt(i)<='z')
+      {
+        cCount++;
+      }
+    }
+    if(vCount%3==0 && cCount%5==0 && vCount>0 && cCount>0)
+    { 
+      System.out.println("Aaarr! Me Plunder!!");
+    }
+    else{
+      System.out.println("Blimey! No Plunder!!");
+    }
+  }
+}
+
+//Task 06
+import java.util.Scanner;
+public class t6
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s1=sc.nextLine();
+    String[] words=s1.split("\\s+");
+    for(int i=(words.length-1);i>=0;i--)
+    {
+      System.out.print(words[i]+" ");
+    }
+    System.out.println();
+  }
+}
+
+//Task 07
+import java.util.Scanner;
+public class t7{
+ public static void main(String[] args) {
+  Scanner sc = new Scanner(System.in);
+  String s1 = sc.nextLine();
+  String s2 = sc.nextLine();
+  String result = "";
+  
+  for(int i = 0; i < s1.length(); i++) {
+   Boolean found = false;
+   for(int j = 0; j < s2.length(); j++) {
+    if((int) s1.charAt(i) == (int) s2.charAt(j)) {
+     found = true;
+     break;
+    }
+   }
+   if(!found) {
+    int n = (int) s1.charAt(i);
+    if(n >= 97 && n <= 122) {
+     char c = (char) (n - 32);
+     result += c;
+    }
+    else {
+     result += s1.charAt(i);
+    }
+   }
+  }
+  for(int i = 0; i < s2.length(); i++) {
+   Boolean found = false;
+   for(int j = 0; j < s1.length(); j++) {
+    if((int) s2.charAt(i) == (int) s1.charAt(j)) {
+     found = true;
+     break;
+    }
+   }
+   if(!found) {
+    int n = (int) s2.charAt(i);
+    if(n >= 97 && n <= 122) {
+     char c = (char) (n - 32);
+     result += c;
+    }
+    else {
+     result += s2.charAt(i);
+    }
+   }
+  }
+  System.out.println(result);
+ }
+}
+
+//Task 08
+import java.util.Scanner;
+public class t8
+{
+  public static void main(String[]args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s1=sc.nextLine();
+    String s2=s1.toLowerCase();
+    String s3="";
+    int count=0;
+    for(int i=0;i<s2.length();i++)
+    {
+      if(s2.charAt(i)>='a'&&s2.charAt(i)<='z')
+      {
+        count++;
+          if(count%2!=0){
+          s3+=s2.charAt(i);
+        }
+        else{
+          s3+=(char)((int)s2.charAt(i)-32);
+        }
+      }
+      else{
+        s3+=s2.charAt(i);
+      }
+    }
+    System.out.println(s3);
+  }
+}
+
+//Task 09
+import java.util.Scanner;
+public class t9 {
+    public static void main(String[] args) {
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the password:");
+      String s1 = sc.nextLine();
+      boolean hasLower = false;
+      boolean hasUpper = false;
+      boolean hasDigit = false;
+      boolean hasSpecial = false;
+      boolean validLength = s1.length() > 7;  
+      for (int i = 0; i < s1.length(); i++) 
+          {
+           char ch = s1.charAt(i);
+
+            if (ch >= 'a' && ch <= 'z') 
+             {
+                hasLower = true;
+            } else if (ch >= 'A' && ch <= 'Z') {
+                hasUpper = true;
+            } else if (ch >= '0' && ch <= '9') {
+                hasDigit = true;
+            } else if ((ch >= 33 && ch <= 47) || 
+                       (ch >= 58 && ch <= 64) || 
+                       (ch >= 91 && ch <= 96) || 
+                       (ch >= 123 && ch <= 126)) {
+                hasSpecial = true;
+            }
+            if (hasLower && hasUpper && hasDigit && hasSpecial) {
+                break;
+            }
+        }
+      boolean isValid = hasLower && hasUpper && hasDigit && hasSpecial && validLength;
+      System.out.println(isValid);
+    }
+}
